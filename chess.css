@@ -1,0 +1,112 @@
+#chess-game-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    width: 900px;
+    height: 650px;
+
+    padding: 25px;
+}
+#chess-game-end-overlay {
+    display: none;
+    background: gray;
+}
+.knocked-out-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    
+    width: 125px;
+    height: 375px;
+    padding: 20px;
+    gap: 12.5px;
+}
+#knocked-out-whites {
+    flex-wrap: wrap;
+}
+.knocked-out-container .piece {
+    width: 30px;
+    height: 30px;
+}
+#board-inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    background: #f00;
+    box-shadow: 0px 0px 25px 10px rgba(50,50,50,0.75);
+
+    width: 600px;
+    height: 600px;
+}
+.board-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: all 350ms;
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5) inset;
+
+    width: 12.5%;
+    height: 12.5%;
+}
+.board-square-white {
+    background: #fff;
+}
+.board-square-black {
+    background: #6a6;
+}
+.board-square-white:hover {
+    background-color: #aaa;
+}
+.board-square-black:hover {
+    background-color: #484;
+}
+.board-square-valid-move {
+    opacity: 70%;
+}
+.board-square .piece {
+    width: 70%;
+    height: 70%;
+}
+.piece-pa-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/0/04/Chess_plt60.png") no-repeat center center/cover;
+    background-size: cover;
+}
+.piece-pa-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/c/cd/Chess_pdt60.png") no-repeat center center/cover;
+}
+.piece-ro-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Chess_rlt60.png") no-repeat center center/cover;
+}
+.piece-ro-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Chess_rdt60.png") no-repeat center center/cover;
+}
+.piece-kn-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/2/28/Chess_nlt60.png") no-repeat center center/cover;
+}
+.piece-kn-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Chess_ndt60.png") no-repeat center center/cover;
+}
+.piece-bi-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/Chess_blt60.png") no-repeat center center/cover;
+}
+.piece-bi-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/8/81/Chess_bdt60.png") no-repeat center center/cover;
+}
+.piece-qu-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/4/49/Chess_qlt60.png") no-repeat center center/cover;
+}
+.piece-qu-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/a/af/Chess_qdt60.png") no-repeat center center/cover;
+}
+.piece-ki-white {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Chess_klt60.png") no-repeat center center/cover;
+}
+.piece-ki-black {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Chess_kdt60.png") no-repeat center center/cover;
+}
